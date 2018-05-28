@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-$debug = TRUE; // Set this to true to avoid automatic updates of this script
+$debug = false; // Set this to true to avoid automatic updates of this script
 
 $cwd = getcwd();
 chdir(__DIR__);
@@ -60,7 +60,13 @@ $MadelineProto->parse_dc_options($dc_options);
 $protocol = getprotobyname('tcp');
 $protocol = $protocol === FALSE ? 0 : $protocol;
 
-$server_options = [
+$server_options_config = [];
+if (file_exists("config.inc")) {
+  $config = (include "config.inc");
+  $server_options_config = isset($config['server']) ? $config['server'] : [];
+}
+
+$server_options = $server_options_config + [
   'type' => AF_INET,
   'protocol' => $protocol,
   'address' => '0.0.0.0',
@@ -77,9 +83,9 @@ $server_options = [
 $clean = FALSE;
 for ($i = 0; !$clean && $i < 10; $i++) {
   try {
+    $clean = TRUE;
     $handler = new \danog\MadelineProto\ServerProxy($server_options);
     $handler->start();
-    $clean = TRUE;
   }
   catch (\Exception $e) {
     unset($handler); // Call destructor

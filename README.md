@@ -6,6 +6,15 @@
 This is just a useful scripts for setting up your own mtprotocol proxy for telegram. Note: this proxy once created can be used by other users who you shared this proxy with and it doesn't give them access to your account, so its completely safe to use it and share with friends!
 Plus: Sponsored channels are coming. That means that your proxy can force your users to subscribe to some channel. This can be as a motivation to setup such a proxy.
 
+# Before you start installation
+
+Some VPS providers are blocking Telegram connections from their servers. Here is the list of these services and it will be filled in during some time, but for now there are already these ones:
+
+* OVH
+* IPhoster
+
+Don't use these providers for your MTProto proxy server.
+
 # Installation
 
 The initial daemon file is in https://github.com/danog/MadelineProto (don't forget to Star this repo)
@@ -59,17 +68,19 @@ Note: you can manualy create this file and write your own 32 character string in
 
 it will show you your secret password for connecting to your proxy. Something like:
 ```
-   abcdefghihfhasfasfsfsgfagasg
+   38f75d6bb9f8138e53489cf1b7a132ec
 ```
 
-abcdefghihfhasfasfsfsgfagasg - is the 32 characters secret (some kind of a password) used to auth on your proxy server. This password will be written to secret.txt file and you always can reveal it if you have root access.
+38f75d6bb9f8138e53489cf1b7a132ec - is the 32 characters secret (some kind of a password) used to auth on your proxy server. This password will be written to secret.txt file and you always can reveal it if you have root access. The easiest way to creat your own password is to use md5 hash of any of provided string using any md5 generator (online tools are also OK).
+
+Note: the password can be set manualy. It MUST be any HEX-string (only digits and characters from range a-f and always lowercased). This key is used to encrypt your traffic using AES encryption.
 
 Now press Ctrl+C to terminate the proxy process.
 
 5. Check permissions for files
 
 ```bash
-  chown /opt/mtproto-proxy mtproxy:mtproxy
+  chown -R mtproxy:mtproxy /opt/mtproto-proxy
 ```
 
 6. Install a linux service to start/stop/restart and autostart proxy
@@ -126,4 +137,13 @@ or (may not be usefull on servers that have internal IP but this is not our case
    ifconfig
 ```   
 
+## Other proxy server implementations
+
+Check this account https://github.com/mtProtoProxy to see all the MTProto proxy implementations.
+
+It is possible to use daemon script from this repo to integrate with any of these servers (except nodejs, for nodejs use pm2 upstart)
+
+## Another version of installator for MTProxy (madeline driven)
+
+Check the repo: https://github.com/aquigni/MTProxySystemd . It provides an easy-install shell script. It installs the same version of MTProto Proxy as provided in this [repo](https://github.com/danog/MadelineProto)
 
