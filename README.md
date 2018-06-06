@@ -9,13 +9,37 @@ Plus: Sponsored channels are coming. That means that your proxy can force your u
 
 # Testing  MTProto proxy servers
 
+## [Python](https://github.com/alexbers/mtprotoproxy) - HIGHLY RECOMMENDED!!!
+
+#### Supports channel advertising, fully supports ipv6 and the easiest to installl!
+
+Note: Requires to install python3 and python3-crypto packages via apt-get
+
+Installation:
+```bash
+   cd /opt
+   git clone https://github.com/alexbers/mtprotoproxy.git
+   cd mtprotoproxy
+   apt-get install python3 python3-crypto
+   ## edit config.py file with desired port and proxy tag and start! ##
+   python3 mtprotoproxy.py
+```
+
+Repo: https://github.com/alexbers/mtprotoproxy (Star this repo and share with friends)
+
+Server #1: https://t.me/proxy?server=koshka.larisa.plez.me&port=6669&secret=469fe09b277900a8ae91dcefa736056b
+
+Server #2: https://t.me/proxy?server=strekoza.zhanna.plez.me&port=6669&secret=ace63eff7aefb133be6e72f5f57d8382
+
 ### C (Official Telegram MTProxy)
 
-Note: It is a very first version so it can be quite tricky to make it work, though it is possible. Also check my fork with tutorials here https://github.com/p1ratrulezzz/MTProxy-1
+Opinions: Difficult to install. Great use of resources, supports channel advertising, works stable if was successfully installed. Doesn't work on some servers expecially on servers located at Russia (even using VPN). I do not recommend to install unless you want to advertise your channel (in this case it's better to use Python version anyway).
+
+Note: It is a very first version so it can be quite tricky to make it work, though it is possible. Also check my fork with tutorials here https://github.com/p1ratrulezzz/MTProxy-1 and here https://p1ratrulezzz.me/2018/06/creating-your-own-official-mtproto-proxy-with-channel-promotion-very-easy-way.html
 
 Repo: https://github.com/TelegramMessenger/MTProxy
 
-Server #1: https://t.me/proxy?server=gorilla.proxy.plez.me&port=6968&secret=469fe09b277900a8ae91dcefa736056b
+Server #1: https://t.me/proxy?server=gorilla.anton.plez.me&port=6968&secret=469fe09b277900a8ae91dcefa736056b
 
 And yes. This server does have an ability to set promoted channel (check my forked repo and blogpost for tutorial)
 
@@ -23,9 +47,7 @@ And yes. This server does have an ability to set promoted channel (check my fork
 
 Note: there is an issue with Android clients. It's impossible to send messages. Desktop clients work great.
 
-Server #1: https://t.me/proxy?server=54.38.132.214&port=6666&secret=7eb5a9c0b76971496098bda828b71236 (down)
-
-Server #2: https://t.me/proxy?server=proxyold.plez.me&port=6667&secret=e1fba1875a6d8dfb73abf3959c2c469f (dev-master branch)
+Server #1: https://t.me/proxy?server=verblud.nikita.plez.me&port=6667&secret=e1fba1875a6d8dfb73abf3959c2c469f (dev-master branch)
 
 Pleae, test the servers above to gather statistics on CPU load and etc. Version 0.1.6 has an issue with creating a lot of zombie forks and killing the server completely. Set memory_limit to 32MB on your server per PHP script to save some resources.
 
@@ -35,15 +57,7 @@ Repo: https://github.com/FreedomPrevails/JSMTProxy
 
 Note: if a lot of people are connected and uploading files, server will suffer from high CPU load 
 
-Server #1: https://t.me/proxy?server=proxyold.plez.me&port=6969&secret=ace63eff7aefb133be6e72f5f57d8382
-
-## [Python](https://github.com/alexbers/mtprotoproxy)
-
-Note: Requires to install python3 and python3-crypto packages via apt-get
-
-Repo: https://github.com/alexbers/mtprotoproxy
-
-Server #1: https://t.me/proxy?server=proxyold.plez.me&port=6669&secret=ace63eff7aefb133be6e72f5f57d8382
+Server #1: https://t.me/proxy?server=homyak.evgeniy.plez.me&port=6969&secret=ace63eff7aefb133be6e72f5f57d8382
 
 ## [Java](https://github.com/makkarpov/mtoxy)
 
@@ -51,7 +65,9 @@ Note: requires JRE 8 or JDK 8. On version 9 and higher won't work.
 
 Repo: https://github.com/makkarpov/mtoxy
 
-Server #1: https://t.me/proxy?server=proxyold.plez.me&port=8443&secret=4A3A2A4903C8F00D6863E2317420F038
+Server #1: https://t.me/proxy?server=horek.drakula.plez.me&port=8443&secret=4A3A2A4903C8F00D6863E2317420F038
+
+Server #2: https://t.me/proxy?server=kot.boris.plez.me&port=6968&secret=ace63eff7aefb133be6e72f5f57d8382
 
 # Before you start installation
 
