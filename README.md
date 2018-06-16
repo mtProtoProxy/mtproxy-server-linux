@@ -14,8 +14,16 @@ Plus: Sponsored channels are coming. That means that your proxy can force your u
 #### Supports channel advertising, fully supports ipv6 and the easiest to installl!
 
 Note: Requires to install python3 and python3-crypto packages via apt-get
+Installation of docker version: https://p1ratrulezzz.me/2018/06/eshhe-odin-variant-mtproto-proxy-s-reklamoj.html
 
-Installation:
+Installation on CentOS (automatic): Check the tutorial in repo https://github.com/HirbodBehnam/MTProtoProxyCentOSInstall and don't forget to star. 
+
+Easy install on CentOS command
+```bash
+wget -O - https://git.io/vhgUt | sudo -E bash -
+```
+
+Installation on Ubuntu/Debian:
 ```bash
    cd /opt
    git clone https://github.com/alexbers/mtprotoproxy.git
@@ -27,9 +35,9 @@ Installation:
 
 Repo: https://github.com/alexbers/mtprotoproxy (Star this repo and share with friends)
 
-Server #1: https://t.me/proxy?server=gorilla.anton.plez.me&port=6968&secret=469fe09b277900a8ae91dcefa736056b
+Server #1: https://t.me/proxy?server=nikola.tesla.dnsd.info&port=443&secret=469fe09b277900a8ae91dcefa736056b
 
-(Note: this server will be closed soon, it is available only for short time for testing purposes)
+Server #2(tmp): https://t.me/proxy?server=cherchil.dnsdynamic.com&port=443&secret=469fe09b277900a8ae91dcefa736056b
 
 ### C (Official Telegram MTProxy)
 
@@ -38,10 +46,6 @@ Opinions: Difficult to install. Great use of resources, supports channel adverti
 Note: It is a very first version so it can be quite tricky to make it work, though it is possible. Also check my fork with tutorials here https://github.com/p1ratrulezzz/MTProxy-1 and here https://p1ratrulezzz.me/2018/06/creating-your-own-official-mtproto-proxy-with-channel-promotion-very-easy-way.html
 
 Repo: https://github.com/TelegramMessenger/MTProxy
-
-Server #1: https://t.me/proxy?server=koshka.larisa.plez.me&port=6669&secret=469fe09b277900a8ae91dcefa736056b
-
-Server #2: https://t.me/proxy?server=strekoza.zhanna.plez.me&port=6669&secret=ace63eff7aefb133be6e72f5f57d8382
 
 And yes. This server does have an ability to set promoted channel (check my forked repo and blogpost for tutorial)
 
